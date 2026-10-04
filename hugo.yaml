@@ -7,12 +7,20 @@ params:
   env: production
   author: "Prem Kumar"
   description: "Software Engineer · C++ · Systems · Graphics"
-  tagline: "Software Engineer · C++ · Systems · Graphics"
-  defaultTheme: "light"
+  defaultTheme: "dark"
 
   # Single-page site: no theme chrome, no "back to top" button.
   disableThemeToggle: true
   disableScrollToTop: true
+
+  profileMode:
+    enabled: true
+    title: "Prem Kumar"
+    subtitle: "Software Engineer · C++ · Systems · Graphics"
+    imageUrl: "https://github.com/premkumar-ch.png"
+    imageTitle: "Prem Kumar"
+    imageWidth: 150
+    imageHeight: 150
 
   socialIcons:
     - name: github

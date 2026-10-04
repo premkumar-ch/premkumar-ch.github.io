@@ -4,21 +4,30 @@
     display: none;
 }
 
-.home-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0 0 0.25rem;
+/* Keep the profile block compact instead of a full-screen hero. */
+.main .profile {
+    min-height: 0;
+    padding: 2rem 0 1rem;
 }
 
-.home-subtitle {
+.main .profile h1 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.main .profile span {
     color: var(--secondary);
-    margin: 0 0 2.5rem;
+}
+
+.profile img {
+    border-radius: 50%;
 }
 
 .home-heading {
     font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 0 0.75rem;
+    text-align: center;
+    margin: 1.5rem 0 0.75rem;
 }
 
 .home .post-content {
@@ -27,9 +36,4 @@
 
 .home .post-content p {
     margin: 0 0 1rem;
-}
-
-.home-links {
-    margin-top: 2rem;
-    font-size: 0.95rem;
 }
