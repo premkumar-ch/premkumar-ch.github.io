@@ -5,16 +5,14 @@ theme: "PaperMod"
 
 params:
   env: production
-  author: "Chilumula Prem Kumar"
-  description: "C++, systems programming, graphics, and computational software."
+  author: "Prem Kumar"
+  description: "Software Engineer · C++ · Systems · Graphics"
+  tagline: "Software Engineer · C++ · Systems · Graphics"
+  defaultTheme: "light"
 
-  profileMode:
-    enabled: true
-    title: "Prem Kumar"
-    subtitle: "C++ · Systems Programming · Graphics · Performance"
-    imageUrl: "https://github.com/premkumar-ch.png"
-    imageWidth: 130
-    imageHeight: 130
+  # Single-page site: no theme chrome, no "back to top" button.
+  disableThemeToggle: true
+  disableScrollToTop: true
 
   socialIcons:
     - name: github

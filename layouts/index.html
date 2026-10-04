@@ -1,17 +1,19 @@
 {{- define "main" }}
+<article class="home">
+    <h1 class="home-title">{{ .Title }}</h1>
+    {{- with site.Params.tagline }}
+    <p class="home-subtitle">{{ . }}</p>
+    {{- end }}
 
-{{- partial "index_profile.html" . }}
+    <h2 class="home-heading">About</h2>
+    <div class="post-content">
+        {{ .Content }}
+    </div>
 
-<main class="main">
-    <article class="post-single">
-        <header class="post-header">
-            <h1 class="post-title entry-hint-parent">About</h1>
-        </header>
-
-        <div class="post-content">
-            {{ .Content }}
-        </div>
-    </article>
-</main>
-
+    {{- range site.Params.socialIcons }}
+    <p class="home-links">
+        <a href="{{ .url }}" rel="me noopener" target="_blank">{{ replace .name "github" "GitHub" }}</a>
+    </p>
+    {{- end }}
+</article>
 {{- end }}

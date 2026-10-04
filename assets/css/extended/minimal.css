@@ -1,0 +1,35 @@
+/* Minimal single-page layout: no site chrome, plain text-focused page. */
+
+.header {
+    display: none;
+}
+
+.home-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+}
+
+.home-subtitle {
+    color: var(--secondary);
+    margin: 0 0 2.5rem;
+}
+
+.home-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+.home .post-content {
+    margin: 0;
+}
+
+.home .post-content p {
+    margin: 0 0 1rem;
+}
+
+.home-links {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
