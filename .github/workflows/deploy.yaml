@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"] # Or "master", match your default branch name
+    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -46,6 +46,8 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/ # <--- Updated from default (_site/) to Hugo's output folder
 
   deploy:
     environment:
