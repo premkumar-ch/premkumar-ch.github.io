@@ -9,4 +9,18 @@
     </div>
 </article>
 
+{{- with first 5 (where site.RegularPages "Section" "posts") }}
+<article class="home">
+    <h2 class="home-heading">Writing</h2>
+    <ul class="home-posts">
+        {{- range . }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span class="home-post-date">{{ .Date.Format "2 January 2006" }}</span>
+        </li>
+        {{- end }}
+    </ul>
+</article>
+{{- end }}
+
 {{- end }}

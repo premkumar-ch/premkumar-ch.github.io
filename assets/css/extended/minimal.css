@@ -37,3 +37,24 @@
 .home .post-content p {
     margin: 0 0 1rem;
 }
+
+.home-posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home-posts li {
+    margin: 0 0 0.75rem;
+}
+
+.home-posts a {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.home-post-date {
+    display: block;
+    color: var(--secondary);
+    font-size: 0.85rem;
+}
