@@ -122,6 +122,10 @@ P(t) = O + tD
 - `D` is the direction — the unit vector pointing where we are looking.
 - `t` is distance travelled. `t = 0` is the camera. `t = 1` is one unit away. `t = 7.3` is 7.3 units away.
 
+{{< figure src="/images/ray-and-sphere.webp" width="1400" height="1185" align="center" alt="Notebook sketch of a ray leaving an origin P0 at t = 0, running outward toward t = infinity, and meeting a sphere at a point P1" caption="The sketch I drew while working this out. The ray starts at its origin **P₀** with **t = 0** and runs outward toward **t = ∞**. Where it first meets the sphere is **P₁**. The arrow off the surface is the normal at that point — which is the next thing I needed." >}}
+
+That is all a ray is. No more geometry than this, no special case for "camera ray" versus "shadow ray". A starting point, a direction, and a dial for how far along it we are.
+
 The useful thing about this formula is not that it is elegant. It is that it turns a visual question into an arithmetic one. Instead of "does this ray hit that sphere?", I can ask a question I know how to answer with numbers:
 
 > **For which values of `t` does `P(t)` satisfy the equation of the sphere?**
@@ -420,6 +424,8 @@ Two details in that call are doing real work:
 
 - **`0.001f` again.** The shadow ray starts exactly on the surface we are shading. Without the epsilon, the sphere we are standing on would block its own light and the entire sphere would be uniformly shadowed. Every hard-coded magic number in a renderer is some version of this problem.
 - **`t_max` is the clever one.** For a point light, `t_max` is the distance from `P` to the light. For a directional light it is `inf`. That single parameter is what makes one shadow test correct for both light types: the ray is allowed to travel *only as far as the light is*, so a sphere *behind* the light cannot cast a shadow on `P`. Getting that wrong is a classic bug — shadows that appear in front of objects, or a sphere shadowing itself from a light that is nowhere near it.
+
+{{< figure src="/images/point-light-shadow.webp" width="1400" height="1185" align="center" alt="Notebook sketch of a point light with a sphere between it and a surface, casting a patch of shadow on the ground" caption="This is the idea I was scribbling on the page next to it: a point light, a sphere sitting between the light and the ground, and the patch behind the sphere that never sees the light. The edge of that patch is not a special computation — it is the ray drawn from a surface point towards the light, stopping at the sphere." >}}
 
 Look again at what just happened. I already had a function that casts a ray and reports what it hits. I reused it, unchanged, with different parameters, and got shadows. That is the real lesson of this section, and it generalises far beyond ray tracing:
 
