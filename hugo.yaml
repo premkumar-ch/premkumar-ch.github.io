@@ -12,21 +12,13 @@ params:
   profileMode:
     enabled: true
     title: "Prem"
-    subtitle: "Systems Software Engineer | High-Performance Engines & Architecture"
-    imageUrl: "https://github.com/<your-username>.png"
+    subtitle: "Systems Software Engineer | "
+    imageUrl: "https://github.com/premkumar-ch.png"
     imageWidth: 130
     imageHeight: 130
     buttons:
       - name: GitHub Projects
-        url: "https://github.com/<your-username>?tab=repositories"
+        url: "https://github.com/premkumar-ch?tab=repositories"
       - name: Resume / CV
         url: "/resume.pdf" # Place your PDF directly in the static/ folder
 
-  # Social / Contact Links
-  socialIcons:
-    - name: "github"
-      url: "https://github.com/<your-username>"
-    - name: "linkedin"
-      url: "https://linkedin.com/in/your-profile"
-    - name: "email"
-      url: "mailto:your-email@domain.com"
