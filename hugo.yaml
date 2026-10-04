@@ -1,24 +1,26 @@
-baseURL: 'https://premkumar-ch.github.io/'
-languageCode: 'en-us'
-title: "Developer Portfolio"
-theme: 'PaperMod'
+baseURL: "https://premkumar-ch.github.io/"
+languageCode: "en-us"
+title: "Prem Kumar"
+theme: "PaperMod"
 
 params:
   env: production
-  description: "Systems & Backend Engineering Portfolio"
-  author: "Chilumula Prem kumar"
-  
-  # Configure Homepage as a Pure Portfolio Card
+  author: "Chilumula Prem Kumar"
+  description: "Engineer "
+
   profileMode:
     enabled: true
-    title: "Prem"
-    subtitle: "Systems Software Engineer | "
+    title: "Prem Kumar"
+    subtitle: "Software Engineer · C++ · Systems · Graphics · Computer Vision"
+
     imageUrl: "https://github.com/premkumar-ch.png"
     imageWidth: 130
     imageHeight: 130
-    buttons:
-      - name: GitHub Projects
-        url: "https://github.com/premkumar-ch?tab=repositories"
-      - name: Resume / CV
-        url: "/resume.pdf" # Place your PDF directly in the static/ folder
 
+    buttons:
+      - name: About
+        url: "/about/"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/premkumar-ch"
