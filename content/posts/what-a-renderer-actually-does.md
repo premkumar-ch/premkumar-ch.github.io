@@ -81,6 +81,8 @@ I can loop over pixels, but a pixel is a flat 2D thing and my world is 3D. A pix
 
 This is the job of the camera, and I did not want to build a camera class with matrices and quaternions before I understood what a camera *is* for this program. So I did the simplest possible thing: a floating viewport, one unit tall, sitting one unit in front of the origin.
 
+{{< figure src="/images/canvas-to-viewport.webp" width="1600" height="695" align="center" alt="Notebook sketch of a two dimensional canvas with x and y axes, and a viewport rectangle of width vw and height vh floating a distance d in front of it along the z axis, joined by projection arrows" caption="The picture the next function is drawing from. The canvas is the flat grid of pixels — `x` across, `y` up. Floating in front of it, a distance `d` away along `z`, is the viewport: `vw` wide, `vh` tall. The arrows are the whole job — they show where a given `(x, y)` on the canvas lands on that rectangle. `vh` is `viewport_size`, `vw` is `viewport_width`, `d` is `projection_plane_d`." >}}
+
 ```cpp
 float viewport_size = 1.0f;
 float projection_plane_d = 1.0f;
