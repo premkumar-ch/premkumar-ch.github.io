@@ -1,0 +1,32 @@
+baseURL: 'https://premkumar-ch.github.io/'
+languageCode: 'en-us'
+title: "Developer Portfolio"
+theme: 'PaperMod'
+
+params:
+  env: production
+  description: "Systems & Backend Engineering Portfolio"
+  author: "Your Name"
+  
+  # Configure Homepage as a Pure Portfolio Card
+  profileMode:
+    enabled: true
+    title: "Hi, I'm Your Name 👋"
+    subtitle: "Systems Software Engineer | High-Performance Engines & Architecture"
+    imageUrl: "https://github.com/<your-username>.png"
+    imageWidth: 130
+    imageHeight: 130
+    buttons:
+      - name: GitHub Projects
+        url: "https://github.com/<your-username>?tab=repositories"
+      - name: Resume / CV
+        url: "/resume.pdf" # Place your PDF directly in the static/ folder
+
+  # Social / Contact Links
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/<your-username>"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/your-profile"
+    - name: "email"
+      url: "mailto:your-email@domain.com"
