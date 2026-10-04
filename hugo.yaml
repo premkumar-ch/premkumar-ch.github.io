@@ -11,7 +11,7 @@ params:
   # Configure Homepage as a Pure Portfolio Card
   profileMode:
     enabled: true
-    title: "Hi, I'm Your Name 👋"
+    title: "Prem"
     subtitle: "Systems Software Engineer | High-Performance Engines & Architecture"
     imageUrl: "https://github.com/<your-username>.png"
     imageWidth: 130
